@@ -1,4 +1,4 @@
-const bookList = document.getElementById('my-book-list');
+const MyBbookList = document.getElementById('my-book-list');
 let books = JSON.parse(localStorage.getItem('books')) || [
   { title: 'The Book One', author: 'Jhon Done' },
   { title: 'The Book Two', author: 'Shakespaere' },
@@ -6,12 +6,12 @@ let books = JSON.parse(localStorage.getItem('books')) || [
 ];
 
 function displayBook() {
-  bookList.innerHTML = '';
+    MyBbookList.innerHTML = '';
   books.forEach((book, index) => {
     const newDiv = document.createElement('div');
 
     newDiv.innerHTML = `<div>${book.title}</div> <div> ${book.author}</div><div> <button data-index="${index}" class="remove-btn">Remove</button></div><div><hr></div>`;
-    bookList.appendChild(newDiv);
+    MyBbookList.appendChild(newDiv);
   });
 }
 
@@ -46,7 +46,7 @@ addForm.addEventListener('submit', (event) => {
 
 // remove button section
 
-bookList.addEventListener('click', (event) => {
+MyBbookList.addEventListener('click', (event) => {
   if (event.target.classList.contains('remove-btn')) {
     const index = parseInt(event.target.dataset.index, 2);
     removeBook(index);
