@@ -96,7 +96,7 @@ Browser
 
 Clone this repository to your desired folder:
 Opent it to your code editor
-open it
+open it then.
 
 
 ### Install
