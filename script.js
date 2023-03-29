@@ -6,7 +6,7 @@ let books = JSON.parse(localStorage.getItem('books')) || [
 ];
 
 function displayBook() {
-    MyBbookList.innerHTML = '';
+  MyBbookList.innerHTML = '';
   books.forEach((book, index) => {
     const newDiv = document.createElement('div');
 
